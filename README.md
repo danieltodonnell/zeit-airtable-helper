@@ -16,3 +16,7 @@ in now.json add a section:
 
 in node code, get the value with:
 `const key = process.env.AIRTABLE_KEY`
+
+## Access your api
+Access your api with the `base` and `tab` querystring params:
+`https://airtable-helper-123hashcode.now.sh/api.js?base=123hashcode&tab=Projects`

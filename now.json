@@ -1,0 +1,11 @@
+{
+  "name": "airtable-helper",
+  "version": 2,
+  "builds": [
+    { "src": "*.js", "use": "@now/node" },
+    { "src": "index.html", "use": "@now/static" }
+  ],
+  "env": {
+    "AIRTABLE_KEY": "@airtable_key"
+  }
+}

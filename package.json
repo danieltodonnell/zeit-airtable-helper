@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "airtable": "^0.5.8",
+    "axios": "^0.18.0"
+  }
+}

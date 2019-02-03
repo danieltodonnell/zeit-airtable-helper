@@ -3,7 +3,7 @@
 
 `now`
 
-## Setup and application secret
+## Setup your application secret
 in terminal:
 `now secrets add airtable-key "API_KEY_HERE"`
 

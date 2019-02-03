@@ -7,6 +7,8 @@
 in terminal:
 `now secrets add airtable-key "API_KEY_HERE"`
 
+(These steps below are already done)
+
 in now.json add a section:
 `"env": {
   "AIRTABLE_KEY": "@airtable_key"

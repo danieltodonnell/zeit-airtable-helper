@@ -7,12 +7,15 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${key}`
 module.exports = (req, res) => {
 
   const qs = querystring.parse(req.url.split('?')[1])
-  const base = qs.base || 'NO_BASE_SPECIFIED'
-  const tab = qs.tab || 'NO_TAB_SPECIFIED'
+  const base = qs.base
+  const tab = qs.tab
   const api = `${url}/${base}/${tab}`
 
-  // UNCOMMENT IF YOU ARE HAVING DIFFICULTIES CONNECTING
-  // console.log(api, qs, url, base, tab, key)
+  if (!base || !tab) {
+    console.error('Please define "base" and "tab" querystring params',
+      api, qs, url, base, tab, key)
+    process.exit(1)
+  }
 
   axios.get(api)
     .then(function (response) {

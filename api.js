@@ -11,7 +11,8 @@ module.exports = (req, res) => {
   const tab = qs.tab || 'NO_TAB_SPECIFIED'
   const api = `${url}/${base}/${tab}`
 
-  console.log(api, qs, url, base, tab, key)
+  // UNCOMMENT IF YOU ARE HAVING DIFFICULTIES CONNECTING
+  // console.log(api, qs, url, base, tab, key)
 
   axios.get(api)
     .then(function (response) {
